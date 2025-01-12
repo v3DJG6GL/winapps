@@ -1,0 +1,22 @@
+# Copyright (c) 2024 Fmstrat
+# All rights reserved.
+#
+# SPDX-License-Identifier: Proprietary
+
+# GNOME shortcut name
+NAME="MKV Muxing Batch GUI"
+
+# Used for descriptions and window class
+FULL_NAME="MKV Muxing Batch GUI"
+
+# The executable inside windows
+WIN_EXECUTABLE="C:\Program Files (x86)\MKV Muxing Batch GUI\MKV Muxing Batch GUI.exe"
+
+# GNOME categories
+CATEGORIES="WinApps"
+
+# GNOME mimetypes
+MIME_TYPES=""
+
+# System Icon
+# ICON="Terminal"
