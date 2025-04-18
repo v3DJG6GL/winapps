@@ -9,12 +9,12 @@
   ...
 }:
 let
-  rev = "9f5fbcb57f2932b260202fb582f9adcf28df5f1c";
-  hash = "sha256-cShXlcFHTryxKLKxdoqZSge2oyGgeuFPW9Nxg+gSjB4=";
+  rev = "9b3f6c581791222a3a04508606755d6d0519f322";
+  hash = "sha256-Hy/o5IY9HmTWaX54Ek5ABmppPpzgM+MdCrhzEzVmtwY=";
 in
 stdenv.mkDerivation rec {
   pname = "winapps-launcher";
-  version = "0-unstable-2024-10-01";
+  version = "0-unstable-2025-03-11";
 
   src = fetchFromGitHub {
     owner = "winapps-org";
@@ -29,10 +29,10 @@ stdenv.mkDerivation rec {
     (callPackage ../winapps { })
   ];
 
-  patches = [ ./WinAppsLauncher.patch ];
+  patches = [ ./WinApps-Launcher.patch ];
 
   postPatch = ''
-    substituteAllInPlace WinAppsLauncher.sh
+    substituteAllInPlace WinApps-Launcher.sh
   '';
 
   installPhase = ''
@@ -41,7 +41,7 @@ stdenv.mkDerivation rec {
     mkdir -p $out
     cp -r ./Icons $out/Icons
 
-    install -m755 -D WinAppsLauncher.sh $out/bin/winapps-launcher
+    install -m755 -D WinApps-Launcher.sh $out/bin/winapps-launcher
     install -Dm444 -T Icons/AppIcon.svg $out/share/pixmaps/winapps.svg
 
     wrapProgram $out/bin/winapps-launcher \
