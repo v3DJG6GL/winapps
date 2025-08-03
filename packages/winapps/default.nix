@@ -11,12 +11,12 @@
   ...
 }:
 let
-  rev = "885d02079a36aa9696de46440c5b29b95278f904";
-  hash = "sha256-hkD1siuwlRNOnXpDETZEQlIb/j91hkCspAUl/m5BB6g=";
+  rev = "2c081f218c344de3640b2fef7c3672e649a1bc90";
+  hash = "sha256-C5jB3z/aiDid7TQGMXSkBIjHtk2vJMs9FvE2RpHO5Y8=";
 in
 stdenv.mkDerivation rec {
   pname = "winapps";
-  version = "0-unstable-2025-05-26";
+  version = "0-unstable-2025-08-03";
 
   src = fetchFromGitHub {
     owner = "winapps-org";
